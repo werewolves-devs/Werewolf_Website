@@ -1,0 +1,7 @@
+venv/
+*.css
+*.css.map
+__pycache__
+
+werewolf_website/static/gen/
+werewolf_website/static/.webassets-cache/
