@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 
 from .assets import assets
+from .blueprints.api import bp as api_blueprint
 from .blueprints.season import bp as season_blueprint
 
 app = Flask(__name__)
@@ -18,6 +19,7 @@ def contact():
 
 
 app.register_blueprint(season_blueprint, url_prefix='/season')
+app.register_blueprint(api_blueprint, url_prefix='/api/v1')
 
 if __name__ == '__main__':
     app.run()
